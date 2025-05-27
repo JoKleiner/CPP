@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 09:52:16 by joklein           #+#    #+#             */
-/*   Updated: 2025/05/26 14:47:38 by joklein          ###   ########.fr       */
+/*   Updated: 2025/05/27 11:40:07 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ Dog &Dog::operator=(const Dog &other){
 
 Dog::~Dog(){
 	std::cout << "Dog destructor called" << std::endl;
+	delete m_brain;
 }
 
 void Dog::makeSound() const{

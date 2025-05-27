@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 09:46:18 by joklein           #+#    #+#             */
-/*   Updated: 2025/05/26 14:41:16 by joklein          ###   ########.fr       */
+/*   Updated: 2025/05/27 11:40:12 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ Cat &Cat::operator=(const Cat &other){
 
 Cat::~Cat(){
 	std::cout << "Cat destructor called" << std::endl;
+	delete m_brain;
 }
 
 void Cat::makeSound() const{
