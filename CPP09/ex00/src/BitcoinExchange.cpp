@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 09:47:58 by joklein           #+#    #+#             */
-/*   Updated: 2025/07/24 11:18:05 by joklein          ###   ########.fr       */
+/*   Updated: 2025/08/05 18:06:16 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ bool	error_found(std::string line){
 	if (!valide_date(line))
 		return (std::cerr << RED << "Error: not a valide date" << RESET << std::endl, true);
 	num = std::stod(line.substr(13));
-	if (num > std::numeric_limits<int>::max())
+	if (num > 1000)
 		return (std::cerr << RED << "Error: too large a number." << RESET << std::endl, true);
 	if (num < 0)
 		return (std::cerr << RED << "Error: not a positive number." << RESET << std::endl, true);
