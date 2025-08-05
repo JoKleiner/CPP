@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 12:35:37 by joklein           #+#    #+#             */
-/*   Updated: 2025/07/25 10:49:42 by joklein          ###   ########.fr       */
+/*   Updated: 2025/08/05 16:01:30 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ int rpn_process(std::string arg)
 			return (std::cerr << RED << "Error: int min overflow" << RESET << std::endl, 1);
 		m_stack.push(result);
 	}
+	if(m_stack.size() != 1)
+		return (std::cerr << RED << "Error: not enough operators" << RESET << std::endl, 1);
 	result = m_stack.top();
 	return (std::cout << int(result) << std::endl, 0);
 }
