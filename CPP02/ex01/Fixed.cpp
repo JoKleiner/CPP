@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 12:56:00 by joklein           #+#    #+#             */
-/*   Updated: 2025/05/20 09:47:43 by joklein          ###   ########.fr       */
+/*   Updated: 2025/08/28 10:29:58 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,16 @@
 
 Fixed::Fixed() : m_fPValue(0){
 	std::cout << "Default constructor called" << std::endl;
+}
+
+Fixed::Fixed(const int value){
+	std::cout << "Int constructor called" << std::endl;
+	m_fPValue = value << m_fracBit;
+}
+
+Fixed::Fixed(const float value){
+	std::cout << "Float constructor called" << std::endl;
+	m_fPValue = (int)(roundf(value * (1 << m_fracBit)));
 }
 
 Fixed::Fixed(const Fixed &other) : m_fPValue(other.m_fPValue){
@@ -32,16 +42,6 @@ Fixed &Fixed::operator=(const Fixed &other){
 
 Fixed::~Fixed(){
 	std::cout << "Destructor called" << std::endl;
-}
-
-Fixed::Fixed(const int value){
-	std::cout << "Int constructor called" << std::endl;
-	m_fPValue = value << m_fracBit;
-}
-
-Fixed::Fixed(const float value){
-	std::cout << "Float constructor called" << std::endl;
-	m_fPValue = (int)(roundf(value * (1 << m_fracBit)));
 }
 
 int Fixed::getRawBits(void) const{
