@@ -18,9 +18,6 @@ class Bureaucrat;
 
 class AForm
 {
-  private:
-	AForm();
-
   public:
 	AForm(std::string name, int signGrade, int execGrade, std::string target);
 	AForm(const AForm &other);
@@ -35,13 +32,13 @@ class AForm
 	std::string getTarget() const;
 	virtual void execute(const Bureaucrat &executor) const = 0;
 	
-	class GradeTooHighException final : public std::exception {
-		public:
+	class GradeTooHighException : public std::exception {
+	  public:
 		const char *what() const noexcept override;
 	};
 
-	class GradeTooLowException final : public std::exception {
-		public:
+	class GradeTooLowException : public std::exception {
+	  public:
 		const char *what() const noexcept override;
 	};
 

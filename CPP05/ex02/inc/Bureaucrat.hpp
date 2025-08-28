@@ -6,15 +6,15 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 14:18:34 by joklein           #+#    #+#             */
-/*   Updated: 2025/07/15 16:54:57 by joklein          ###   ########.fr       */
+/*   Updated: 2025/08/28 11:11:40 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-# include <iostream>
-# include "AForm.hpp"
-# include <fstream>
+#include <iostream>
+#include "AForm.hpp"
+#include <fstream>
 
 class AForm;
 
@@ -33,14 +33,14 @@ class Bureaucrat
 	void decrementGrade();
 	void signForm(class AForm &form) const;
 	void executeForm(const AForm &form) const;
-	
-	class GradeTooHighException final : public std::exception {
-		public:
+
+	class GradeTooHighException : public std::exception	{
+	  public:
 		const char *what() const noexcept override;
 	};
 
-	class GradeTooLowException final : public std::exception {
-		public:
+	class GradeTooLowException : public std::exception	{
+	  public:
 		const char *what() const noexcept override;
 	};
 

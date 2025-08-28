@@ -6,14 +6,11 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 14:09:56 by joklein           #+#    #+#             */
-/*   Updated: 2025/07/14 14:27:00 by joklein          ###   ########.fr       */
+/*   Updated: 2025/08/28 11:06:05 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
-
-Form::Form() : m_name("unnamed"), m_signGrade(150), m_execGrade(150), m_signed(false){
-}
 
 Form::Form(std::string name, int signGrade, int execGrade) : m_name(name), m_signGrade(signGrade), m_execGrade(execGrade), m_signed(false){
 	if (signGrade < 1 || execGrade < 1)

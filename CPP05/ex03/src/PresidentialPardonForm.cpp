@@ -6,14 +6,11 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 14:09:56 by joklein           #+#    #+#             */
-/*   Updated: 2025/06/25 12:47:48 by joklein          ###   ########.fr       */
+/*   Updated: 2025/08/28 11:09:44 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/PresidentialPardonForm.hpp"
-
-PresidentialPardonForm::PresidentialPardonForm() : AForm("Pardon", 25, 5, "no_target"){
-}
 
 PresidentialPardonForm::PresidentialPardonForm(std::string target) : AForm("Pardon", 25, 5, target){
 	std::cout << "PresidentialPardonForm " << this->getName() << " created with target: " << target << "." << std::endl;

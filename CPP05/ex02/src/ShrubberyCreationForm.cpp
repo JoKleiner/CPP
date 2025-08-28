@@ -6,14 +6,11 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 14:09:56 by joklein           #+#    #+#             */
-/*   Updated: 2025/06/26 14:56:34 by joklein          ###   ########.fr       */
+/*   Updated: 2025/08/28 11:07:41 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ShrubberyCreationForm.hpp"
-
-ShrubberyCreationForm::ShrubberyCreationForm() : AForm("Shrubbery", 145, 137, "no_target"){
-}
 
 ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : AForm("Shrubbery", 145, 137, target){
 	std::cout << "ShrubberyCreationForm " << this->getName() << " created with target: " << target << "." << std::endl;

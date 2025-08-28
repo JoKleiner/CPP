@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 14:09:38 by joklein           #+#    #+#             */
-/*   Updated: 2025/06/26 14:56:44 by joklein          ###   ########.fr       */
+/*   Updated: 2025/08/28 11:12:32 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,11 @@ class Bureaucrat;
 
 class ShrubberyCreationForm  : public AForm
 {
-  private:
-	ShrubberyCreationForm();
-
   public:
 	ShrubberyCreationForm(std::string target);
 	ShrubberyCreationForm(const ShrubberyCreationForm &other);
 	ShrubberyCreationForm &operator=(const ShrubberyCreationForm &other);
-	~ShrubberyCreationForm();
+	~ShrubberyCreationForm() override;
 
 	void execute(const Bureaucrat &executor) const override;
-	
 };

@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 14:18:34 by joklein           #+#    #+#             */
-/*   Updated: 2025/07/15 16:54:50 by joklein          ###   ########.fr       */
+/*   Updated: 2025/08/28 11:04:12 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,13 @@ class Bureaucrat
 	void signForm(class Form &form) const;
 	void executeForm(const Form &form) const;
 	
-	class GradeTooHighException final : public std::exception {
-		public:
+	class GradeTooHighException : public std::exception {
+	  public:
 		const char *what() const noexcept override;
 	};
 
-	class GradeTooLowException final : public std::exception {
-		public:
+	class GradeTooLowException : public std::exception {
+	  public:
 		const char *what() const noexcept override;
 	};
 

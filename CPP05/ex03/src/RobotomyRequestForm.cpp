@@ -6,14 +6,11 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 14:09:56 by joklein           #+#    #+#             */
-/*   Updated: 2025/06/25 13:01:53 by joklein          ###   ########.fr       */
+/*   Updated: 2025/08/28 11:09:47 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/RobotomyRequestForm.hpp"
-
-RobotomyRequestForm::RobotomyRequestForm() : AForm("Robotomy", 72, 45, "no_target"){
-}
 
 RobotomyRequestForm::RobotomyRequestForm(std::string target) : AForm("Robotomy", 72, 45, target){
 	std::cout << "RobotomyRequestForm " << this->getName() << " created with target: " << target << "." << std::endl;

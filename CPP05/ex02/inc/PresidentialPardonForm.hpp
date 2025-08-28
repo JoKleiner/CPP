@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 14:09:38 by joklein           #+#    #+#             */
-/*   Updated: 2025/06/26 14:56:39 by joklein          ###   ########.fr       */
+/*   Updated: 2025/08/28 11:12:22 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,11 @@ class Bureaucrat;
 
 class PresidentialPardonForm  : public AForm
 {
-  private:
-	PresidentialPardonForm();
-
   public:
 	PresidentialPardonForm(std::string target);
 	PresidentialPardonForm(const PresidentialPardonForm &other);
 	PresidentialPardonForm &operator=(const PresidentialPardonForm &other);
-	~PresidentialPardonForm();
+	~PresidentialPardonForm() override;
 
 	void execute(const Bureaucrat &executor) const override;
-
 };
