@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 13:59:51 by joklein           #+#    #+#             */
-/*   Updated: 2025/05/21 13:18:39 by joklein          ###   ########.fr       */
+/*   Updated: 2025/08/28 10:50:04 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class FragTrap : public ClapTrap
 	FragTrap(std::string name);
 	FragTrap(const FragTrap &other);
 	FragTrap &operator=(const FragTrap &other);
-	~FragTrap();
+	~FragTrap() override;
 
 	void attack(const std::string &target);
     void highFivesGuys(void);

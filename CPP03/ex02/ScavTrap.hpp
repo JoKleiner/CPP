@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 12:05:00 by joklein           #+#    #+#             */
-/*   Updated: 2025/05/20 13:51:33 by joklein          ###   ########.fr       */
+/*   Updated: 2025/08/28 10:50:09 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class ScavTrap : public ClapTrap
 	ScavTrap(std::string name);
 	ScavTrap(const ScavTrap &other);
 	ScavTrap &operator=(const ScavTrap &other);
-	~ScavTrap();
+	~ScavTrap() override;
 
 	void attack(const std::string &target);
 	void guardGate();
