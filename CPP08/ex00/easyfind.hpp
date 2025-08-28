@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 10:18:35 by joklein           #+#    #+#             */
-/*   Updated: 2025/07/11 12:44:44 by joklein          ###   ########.fr       */
+/*   Updated: 2025/08/28 11:51:07 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@
 # include <iostream>
 
 template <typename T>
-auto easyfind(T &contain, int find)
-{
+auto easyfind(T &contain, int find) {
 	return (std::find(contain.begin(), contain.end(), find));
 }
 
