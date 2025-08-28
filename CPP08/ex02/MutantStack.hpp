@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 14:47:09 by joklein           #+#    #+#             */
-/*   Updated: 2025/07/16 11:21:03 by joklein          ###   ########.fr       */
+/*   Updated: 2025/08/28 11:59:57 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ template <typename T>
 class MutantStack : public std::stack<T>
 {
     public:
-        MutantStack() {};
+        MutantStack() = default;
         MutantStack(MutantStack const &other){*this = other;};
-        ~MutantStack() {};
+        ~MutantStack() = default;
         MutantStack &operator=(MutantStack const &other) {
             if(this != &other)
                 return(std::stack<T>::operator=(other));
@@ -48,7 +48,6 @@ class MutantStack : public std::stack<T>
 
 # define RESET "\033[0m"
 # define BOLD "\033[1m"
-
 # define BLACK "\033[30m"
 # define RED "\033[31m"
 # define GREEN "\033[32m"
