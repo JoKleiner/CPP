@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 12:56:00 by joklein           #+#    #+#             */
-/*   Updated: 2025/05/20 09:51:07 by joklein          ###   ########.fr       */
+/*   Updated: 2025/08/28 10:36:48 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,6 @@
 Fixed::Fixed() : m_fPValue(0){
 }
 
-Fixed::Fixed(const Fixed &other) : m_fPValue(other.m_fPValue){
-}
-
-Fixed &Fixed::operator=(const Fixed &other){
-	if (this != &other)
-	{
-		this->m_fPValue = other.getRawBits();
-	}
-	return (*this);
-}
-
-Fixed::~Fixed(){}
-
 Fixed::Fixed(const int value){
 	m_fPValue = value << m_fracBit;
 }
@@ -35,6 +22,17 @@ Fixed::Fixed(const int value){
 Fixed::Fixed(const float value){
 	m_fPValue = static_cast<int>(roundf(value * (1 << m_fracBit)));
 }
+
+Fixed::Fixed(const Fixed &other) : m_fPValue(other.m_fPValue){
+}
+
+Fixed &Fixed::operator=(const Fixed &other){
+	if (this != &other)
+		this->m_fPValue = other.getRawBits();
+	return (*this);
+}
+
+Fixed::~Fixed(){}
 
 int Fixed::getRawBits(void) const{
 	return (this->m_fPValue);

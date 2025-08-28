@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 12:56:02 by joklein           #+#    #+#             */
-/*   Updated: 2025/05/20 10:40:09 by joklein          ###   ########.fr       */
+/*   Updated: 2025/08/28 10:35:38 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,13 @@
 class Fixed
 {
   public:
-	// Con-/Destructors
 	Fixed();
+	Fixed(const int value);
+	Fixed(const float value);
 	Fixed(const Fixed &other);
 	Fixed &operator=(const Fixed &other);
 	~Fixed();
-	Fixed(const int value);
-	Fixed(const float value);
-
+	
 	// Data Handling
 	int getRawBits(void) const;
 	void setRawBits(int const raw);
