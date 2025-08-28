@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 12:56:00 by joklein           #+#    #+#             */
-/*   Updated: 2025/05/20 09:42:33 by joklein          ###   ########.fr       */
+/*   Updated: 2025/08/28 10:12:42 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,6 @@
 Fixed::Fixed() : m_fPValue(0){
 	std::cout << "Default constructor called" << std::endl;
 }
-
-// Fixed::Fixed() {
-//     m_fPValue = 0;
-//     std::cout << "Default constructor called" << std::endl;
-// }
 
 Fixed::Fixed(const Fixed &other){
 	std::cout << "Copy constructor called" << std::endl;
