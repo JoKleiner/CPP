@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 14:57:41 by joklein           #+#    #+#             */
-/*   Updated: 2025/04/15 12:51:44 by joklein          ###   ########.fr       */
+/*   Updated: 2025/08/28 10:27:10 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,11 @@
 class HumanB
 {
   public:
-	HumanB();
-	~HumanB();
+	HumanB() = default;
 	HumanB(std::string name);
 	HumanB(Weapon &weapon);
+	~HumanB() = default;
+	
 	void setWeapon(Weapon &weapon);
 	void attack();
 

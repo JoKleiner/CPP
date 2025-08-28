@@ -3,18 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 14:57:44 by joklein           #+#    #+#             */
-/*   Updated: 2025/04/15 12:53:56 by joklein          ###   ########.fr       */
+/*   Updated: 2025/08/28 10:27:14 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
-
-HumanB::HumanB(){}
-
-HumanB::~HumanB(){}
 
 HumanB::HumanB(std::string name) : m_name(name), m_weapon(nullptr){}
 
