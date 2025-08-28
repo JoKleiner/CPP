@@ -6,28 +6,25 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 16:02:32 by joklein           #+#    #+#             */
-/*   Updated: 2025/07/10 10:15:47 by joklein          ###   ########.fr       */
+/*   Updated: 2025/08/28 11:23:34 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "inc/Base.hpp"
-#include "inc/A.hpp"
-#include "inc/B.hpp"
-#include "inc/C.hpp"
+#include "Base.hpp"
 
 #include <iostream>
-# include <random>
+#include <random>
 
 Base* generate()
 {
     std::random_device rand;
-    int random = rand() % 3;
-    if (random == 0)
-        return new A();
-    else if (random == 1)
-        return new B();
-    else
-        return new C();
+    switch (int random = rand() % 3)
+    {
+        case 0:  return (new A());
+        case 1:  return (new B());
+        case 2:  return (new C());
+        default: return nullptr;
+    }
 }
 
 void identify(Base* p)

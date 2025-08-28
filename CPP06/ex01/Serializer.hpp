@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 14:36:35 by joklein           #+#    #+#             */
-/*   Updated: 2025/07/09 18:03:01 by joklein          ###   ########.fr       */
+/*   Updated: 2025/08/28 11:16:42 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@ struct Data
 
 class Serializer
 {
-    public:
-        static uintptr_t serialize(Data* ptr);
-        static Data* deserialize(uintptr_t raw);
+  public:
+    static uintptr_t serialize(Data* ptr);
+    static Data* deserialize(uintptr_t raw);
     
-    private:
-        Serializer();
-	    Serializer(const Serializer &other);
-	    Serializer &operator=(const Serializer &other);
-	    ~Serializer();
+  private:
+    Serializer();
+	Serializer(const Serializer &other);
+	Serializer &operator=(const Serializer &other);
+	~Serializer();
 };

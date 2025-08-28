@@ -19,14 +19,14 @@
 
 class ScalarConverter
 {
-    public:
-        static int convert(const std::string &input);
+  public:
+    static int convert(const std::string &input);
     
-    private:
-        ScalarConverter();
-	    ScalarConverter(const ScalarConverter &other);
-	    ScalarConverter &operator=(const ScalarConverter &other);
-	    ~ScalarConverter() = default;
+  private:
+    ScalarConverter();
+	ScalarConverter(const ScalarConverter &other);
+	ScalarConverter &operator=(const ScalarConverter &other);
+	~ScalarConverter();
 };
 
 void char_handling(char cha);
