@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/16 12:10:34 by joklein           #+#    #+#             */
-/*   Updated: 2025/08/05 16:38:57 by joklein          ###   ########.fr       */
+/*   Updated: 2025/08/28 12:03:43 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,21 @@
 
 int main(int argc, char **argv)
 {
-	if(argc != 2)
-		return(std::cerr << RED << "Error: could not open file." << RESET << std::endl, 1);
-		
-	try{
+	if (argc != 2)
+		return (std::cerr << RED << "Error: could not open file." << RESET << std::endl, 1);
+
+	try	{
 		std::ifstream input_file(argv[1]);
 		std::ifstream data_csv("data.csv");
-		if(!input_file || !data_csv)
+		if (!input_file || !data_csv)
 			throw(std::runtime_error("Error: could not open file."));
-		
+
 		BitcoinExchange btc(data_csv);
 		btc.process_btc(input_file);
 		input_file.close();
-	} catch(const std::exception &e){
+	}
+	catch (const std::exception &e)	{
 		std::cerr << RED << e.what() << RESET << std::endl;
-		return(1);
+		return (1);
 	}
 }

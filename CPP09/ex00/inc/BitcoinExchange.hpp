@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 09:47:55 by joklein           #+#    #+#             */
-/*   Updated: 2025/07/24 10:43:35 by joklein          ###   ########.fr       */
+/*   Updated: 2025/08/28 12:01:53 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,12 @@ class BitcoinExchange
 		void out_put(std::string input_date, double input_num);
 		
 	private:
-		BitcoinExchange() = default;
 		std::map<std::string, double> m_data_map;
 		
 };
 
 # define RESET "\033[0m"
 # define BOLD "\033[1m"
-
 # define BLACK "\033[30m"
 # define RED "\033[31m"
 # define GREEN "\033[32m"

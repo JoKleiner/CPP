@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 09:47:58 by joklein           #+#    #+#             */
-/*   Updated: 2025/08/05 18:06:16 by joklein          ###   ########.fr       */
+/*   Updated: 2025/08/28 12:09:58 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,6 @@ void BitcoinExchange::process_btc(std::ifstream &input_file)
 			continue ;
 		input_date = line.substr(0, 10);
 		input_num = std::stod(line.substr(13));
-		this->out_put(input_date, input_num);
+		out_put(input_date, input_num);
 	}
 }
