@@ -3,19 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 10:53:43 by joklein           #+#    #+#             */
-/*   Updated: 2025/04/18 13:03:00 by joklein          ###   ########.fr       */
+/*   Updated: 2025/08/28 10:16:37 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook()
-{
-	contact_in_book = 0;
-	contact_index = 0;
+PhoneBook::PhoneBook() : contact_in_book(0), contact_index(0){
 }
 
 int PhoneBook::add_contact()
