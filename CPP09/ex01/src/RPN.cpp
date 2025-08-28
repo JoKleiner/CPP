@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 12:35:37 by joklein           #+#    #+#             */
-/*   Updated: 2025/08/28 12:55:09 by joklein          ###   ########.fr       */
+/*   Updated: 2025/08/28 16:27:34 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ bool RPN::calc_result(char cha)
 		}
 		m_result /= m_value;
 	}
-	return (true);
+	return true;
 }
 
 bool RPN::pop_in_value()
