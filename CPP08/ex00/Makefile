@@ -43,7 +43,6 @@ fclean: clean
 		rm -f $(NAME); \
 		printf "\033[0;31mremoved.\033[0m\n"; \
 	fi
-	@rm -f *_shrubbery; \
 
 re: fclean all
 
