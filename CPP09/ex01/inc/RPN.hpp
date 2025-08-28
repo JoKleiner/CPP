@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 12:30:23 by joklein           #+#    #+#             */
-/*   Updated: 2025/07/25 10:09:32 by joklein          ###   ########.fr       */
+/*   Updated: 2025/08/28 12:55:11 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,19 @@
 #include <stack>
 #include <regex>
 
-int rpn_process(std::string arg);
+class RPN
+{
+  public:
+	static int rpn_process(std::string arg);
+	static bool pop_in_value();
+	static bool calc_result(char cha);
+	static bool check_overflow();
+  
+  private:
+	static double m_result;
+	static double m_value;
+	static std::stack<double> m_stack;
+};
 
 # define RESET "\033[0m"
 # define BOLD "\033[1m"
