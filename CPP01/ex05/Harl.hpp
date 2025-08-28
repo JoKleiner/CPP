@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 16:39:44 by joklein           #+#    #+#             */
-/*   Updated: 2025/04/14 17:46:35 by joklein          ###   ########.fr       */
+/*   Updated: 2025/08/28 10:28:21 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,9 @@
 class Harl
 {
   public:
-	Harl();
-	~Harl();
+	Harl() = default;
+	~Harl() = default;
+	
 	void complain(std::string level);
 
   private:

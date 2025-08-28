@@ -3,18 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 16:39:46 by joklein           #+#    #+#             */
-/*   Updated: 2025/04/15 10:41:48 by joklein          ###   ########.fr       */
+/*   Updated: 2025/08/28 10:28:23 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
-
-Harl::Harl(){}
-
-Harl::~Harl(){}
 
 void Harl::complain(std::string level)
 {
