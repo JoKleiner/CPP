@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 12:56:02 by joklein           #+#    #+#             */
-/*   Updated: 2025/08/28 10:35:38 by joklein          ###   ########.fr       */
+/*   Updated: 2025/09/04 10:04:56 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Fixed
 	Fixed(const float value);
 	Fixed(const Fixed &other);
 	Fixed &operator=(const Fixed &other);
-	~Fixed();
+	~Fixed() = default;
 	
 	// Data Handling
 	int getRawBits(void) const;

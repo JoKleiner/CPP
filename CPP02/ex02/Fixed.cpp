@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 12:56:00 by joklein           #+#    #+#             */
-/*   Updated: 2025/08/28 10:36:48 by joklein          ###   ########.fr       */
+/*   Updated: 2025/09/04 10:09:09 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,18 +28,16 @@ Fixed::Fixed(const Fixed &other) : m_fPValue(other.m_fPValue){
 
 Fixed &Fixed::operator=(const Fixed &other){
 	if (this != &other)
-		this->m_fPValue = other.getRawBits();
+		m_fPValue = other.getRawBits();
 	return (*this);
 }
 
-Fixed::~Fixed(){}
-
 int Fixed::getRawBits(void) const{
-	return (this->m_fPValue);
+	return (m_fPValue);
 }
 
 void Fixed::setRawBits(int const raw){
-	this->m_fPValue = raw;
+	m_fPValue = raw;
 }
 
 float Fixed::toFloat() const{
@@ -57,58 +55,58 @@ std::ostream &operator<<(std::ostream &out, const Fixed &fixed){
 
 // Comparison Operators
 bool Fixed::operator>(const Fixed &other) const{
-	return (this->m_fPValue > other.m_fPValue);}
+	return (m_fPValue > other.m_fPValue);}
 
 bool Fixed::operator<(const Fixed &other) const{
-	return (this->m_fPValue < other.m_fPValue);}
+	return (m_fPValue < other.m_fPValue);}
 
 bool Fixed::operator>=(const Fixed &other) const{
-	return (this->m_fPValue >= other.m_fPValue);}
+	return (m_fPValue >= other.m_fPValue);}
 
 bool Fixed::operator<=(const Fixed &other) const{
-	return (this->m_fPValue <= other.m_fPValue);}
+	return (m_fPValue <= other.m_fPValue);}
 
 bool Fixed::operator==(const Fixed &other) const{
-	return (this->m_fPValue == other.m_fPValue);}
+	return (m_fPValue == other.m_fPValue);}
 
 bool Fixed::operator!=(const Fixed &other) const{
-	return (this->m_fPValue != other.m_fPValue);}
+	return (m_fPValue != other.m_fPValue);}
 
 // Arithmetic Operators
 Fixed Fixed::operator+(const Fixed &other) const{
-	return (Fixed(this->toFloat() + other.toFloat()));}
+	return (Fixed(toFloat() + other.toFloat()));}
 
 Fixed Fixed::operator-(const Fixed &other) const{
-	return (Fixed(this->toFloat() - other.toFloat()));}
+	return (Fixed(toFloat() - other.toFloat()));}
 
 Fixed Fixed::operator*(const Fixed &other) const{
-	return (Fixed(this->toFloat() * other.toFloat()));}
+	return (Fixed(toFloat() * other.toFloat()));}
 
 Fixed Fixed::operator/(const Fixed &other) const{
-	return (Fixed(this->toFloat() / other.toFloat()));}
+	return (Fixed(toFloat() / other.toFloat()));}
 
 // In-/Decrement Operators
 Fixed &Fixed::operator++(){
-	this->m_fPValue++;
+	m_fPValue++;
 	return (*this);
 }
 
 Fixed Fixed::operator++(int){
 	Fixed	temp;
 	temp = *this;
-	this->m_fPValue++;
+	m_fPValue++;
 	return (temp);
 }
 
 Fixed &Fixed::operator--(){
-	this->m_fPValue--;
+	m_fPValue--;
 	return (*this);
 }
 
 Fixed Fixed::operator--(int){
 	Fixed	temp;
 	temp = *this;
-	this->m_fPValue--;
+	m_fPValue--;
 	return temp;
 }
 
