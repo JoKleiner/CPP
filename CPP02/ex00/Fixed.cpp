@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 12:56:00 by joklein           #+#    #+#             */
-/*   Updated: 2025/08/28 10:12:42 by joklein          ###   ########.fr       */
+/*   Updated: 2025/09/04 09:59:07 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,13 @@ Fixed::Fixed() : m_fPValue(0){
 Fixed::Fixed(const Fixed &other){
 	std::cout << "Copy constructor called" << std::endl;
 	m_fPValue = other.getRawBits();
-	// Fixed temp;
-	// temp = other;
-	// m_fPValue = temp.m_fPValue;
 }
 
 Fixed &Fixed::operator=(const Fixed &other)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &other)
-	{
 		this->m_fPValue = other.getRawBits();
-	}
 	return (*this);
 }
 
