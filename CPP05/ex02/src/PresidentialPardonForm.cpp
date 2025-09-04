@@ -6,14 +6,14 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 14:09:56 by joklein           #+#    #+#             */
-/*   Updated: 2025/08/28 11:07:16 by joklein          ###   ########.fr       */
+/*   Updated: 2025/09/04 10:59:21 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/PresidentialPardonForm.hpp"
 
 PresidentialPardonForm::PresidentialPardonForm(std::string target) : AForm("Pardon", 25, 5, target){
-	std::cout << "PresidentialPardonForm " << this->getName() << " created with target: " << target << "." << std::endl;
+	std::cout << "PresidentialPardonForm " << getName() << " created with target: " << target << "." << std::endl;
 }
 
 PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &other) : AForm(other){
@@ -26,11 +26,11 @@ PresidentialPardonForm &PresidentialPardonForm::operator=(const PresidentialPard
 }
 
 PresidentialPardonForm::~PresidentialPardonForm() {
-	std::cout << "PresidentialPardonForm " << this->getName() << " destroyed." << std::endl;
+	std::cout << "PresidentialPardonForm " << getName() << " destroyed." << std::endl;
 }
 
 void PresidentialPardonForm::execute(const Bureaucrat &executor) const {
-	if (executor.getGrade() > this->getExecGrade())
+	if (executor.getGrade() > getExecGrade())
 		throw AForm::GradeTooLowException();
-	std::cout << this->getTarget() << " has been pardoned by Zaphod Beeblebrox." << std::endl;
+	std::cout << getTarget() << " has been pardoned by Zaphod Beeblebrox." << std::endl;
 }
