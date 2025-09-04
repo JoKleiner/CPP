@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 10:53:40 by joklein           #+#    #+#             */
-/*   Updated: 2025/04/14 10:55:15 by joklein          ###   ########.fr       */
+/*   Updated: 2025/09/04 09:46:03 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
 class PhoneBook
 {
   private:
-	Contact contacts[8];
-	int contact_in_book;
-	int contact_index;
+	Contact m_contacts[8];
+	int m_contact_in_book;
+	int m_contact_index;
 
   public:
 	PhoneBook();

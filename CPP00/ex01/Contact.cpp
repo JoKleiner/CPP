@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 11:42:56 by joklein           #+#    #+#             */
-/*   Updated: 2025/04/18 13:02:26 by joklein          ###   ########.fr       */
+/*   Updated: 2025/09/04 09:45:42 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,15 +50,15 @@ int Contact::get_contact_input(const std::string &label, std::string &name)
 
 int Contact::set_contact()
 {
-	if (get_contact_input("first name", first_name) == 1)
+	if (get_contact_input("first name", m_first_name) == 1)
 		return (1);
-	if (get_contact_input("last name", last_name) == 1)
+	if (get_contact_input("last name", m_last_name) == 1)
 		return (1);
-	if (get_contact_input("nick name", nick_name) == 1)
+	if (get_contact_input("nick name", m_nick_name) == 1)
 		return (1);
-	if (get_contact_input("phone number", phone_number) == 1)
+	if (get_contact_input("phone number", m_phone_number) == 1)
 		return (1);
-	if (get_contact_input("darkest secret", darkest_secret) == 1)
+	if (get_contact_input("darkest secret", m_darkest_secret) == 1)
 		return (1);
 	return (0);
 }
@@ -77,18 +77,18 @@ std::string Contact::print_phonebook(std::string name)
 void Contact::search_contact(int index)
 {
 	std::cout << "         " << index << "|";
-	std::cout << print_phonebook(first_name) << "|";
-	std::cout << print_phonebook(last_name) << "|";
-	std::cout << print_phonebook(nick_name);
+	std::cout << print_phonebook(m_first_name) << "|";
+	std::cout << print_phonebook(m_last_name) << "|";
+	std::cout << print_phonebook(m_nick_name);
 	std::cout << std::endl;
 }
 
 void Contact::print_contact(int index)
 {
 	std::cout << "index          = " << index << "\n";
-	std::cout << "first name     = " << first_name << "\n";
-	std::cout << "last name      = " << last_name << "\n";
-	std::cout << "nick name      = " << nick_name << "\n";
-	std::cout << "phone number   = " << phone_number << "\n";
-	std::cout << "darkest secret = " << darkest_secret << "\n" << std::endl;
+	std::cout << "first name     = " << m_first_name << "\n";
+	std::cout << "last name      = " << m_last_name << "\n";
+	std::cout << "nick name      = " << m_nick_name << "\n";
+	std::cout << "phone number   = " << m_phone_number << "\n";
+	std::cout << "darkest secret = " << m_darkest_secret << "\n" << std::endl;
 }

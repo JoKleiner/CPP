@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 11:26:18 by joklein           #+#    #+#             */
-/*   Updated: 2025/04/14 11:08:22 by joklein          ###   ########.fr       */
+/*   Updated: 2025/09/04 09:44:02 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ class Contact
 	void print_contact(int index);
 
   private:
-	std::string index;
-	std::string first_name;
-	std::string last_name;
-	std::string nick_name;
-	std::string phone_number;
-	std::string darkest_secret;
+	std::string m_index;
+	std::string m_first_name;
+	std::string m_last_name;
+	std::string m_nick_name;
+	std::string m_phone_number;
+	std::string m_darkest_secret;
 	std::string print_phonebook(std::string name);
 	int get_contact_input(const std::string &label, std::string &name);
 };

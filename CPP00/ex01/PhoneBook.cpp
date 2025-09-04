@@ -6,24 +6,24 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 10:53:43 by joklein           #+#    #+#             */
-/*   Updated: 2025/08/28 10:16:37 by joklein          ###   ########.fr       */
+/*   Updated: 2025/09/04 09:46:55 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook() : contact_in_book(0), contact_index(0){
+PhoneBook::PhoneBook() : m_contact_in_book(0), m_contact_index(0){
 }
 
 int PhoneBook::add_contact()
 {
-	if (contacts[contact_index].set_contact() == 1)
+	if (m_contacts[m_contact_index].set_contact() == 1)
 		return (1);
-	contact_index++;
-	if (contact_index == 8)
-		contact_index = 0;
-	if (contact_in_book < 8)
-		contact_in_book++;
+	m_contact_index++;
+	if (m_contact_index == 8)
+		m_contact_index = 0;
+	if (m_contact_in_book < 8)
+		m_contact_in_book++;
 	return (0);
 }
 
@@ -33,8 +33,8 @@ int PhoneBook::search_handle()
 
 	std::string input;
 	std::cout << "     index| firstname|  lastname|  nickname" << std::endl;
-	for (int index = 0; index < contact_in_book; index++)
-		contacts[index].search_contact(index);
+	for (int index = 0; index < m_contact_in_book; index++)
+		m_contacts[index].search_contact(index);
 	std::cout << std::endl;
 	while (true)
 	{
@@ -61,12 +61,12 @@ int PhoneBook::search_handle()
 			continue ;
 		}
 		index = std::stoi(input);
-		if (index < 0 || index > contact_in_book - 1)
+		if (index < 0 || index > m_contact_in_book - 1)
 		{
 			std::cout << "Wrong index" << std::endl;
 			break ;
 		}
-		contacts[index].print_contact(index);
+		m_contacts[index].print_contact(index);
 		break ;
 	}
 	return (0);
