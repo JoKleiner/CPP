@@ -6,25 +6,30 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 16:39:46 by joklein           #+#    #+#             */
-/*   Updated: 2025/08/28 10:28:23 by joklein          ###   ########.fr       */
+/*   Updated: 2025/09/04 09:57:35 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
+constexpr unsigned int ct_hash(const char* str)
+{
+    unsigned int hash = 5381;
+    for (size_t i = 0; str[i] != '\0'; i++)
+        hash = hash * 33 ^ static_cast<unsigned char>(str[i]);
+    return(hash);
+}
+
 void Harl::complain(std::string level)
 {
-	std::string mssg[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-	void (Harl::*mssg_ptr[4])() = {&Harl::debug, &Harl::info, &Harl::warning,&Harl::error};
-	for (unsigned long i = 0; i < std::size(mssg); i++)
-	{
-		if (level == mssg[i])
-		{
-			(this->*mssg_ptr[i])();
-			return ;
-		}
+	switch(ct_hash(level.c_str())) {
+		case ct_hash("DEBUG"):		debug();	break;
+		case ct_hash("INFO"):		info();		break;
+		case ct_hash("WARNING"):	warning();	break;
+		case ct_hash("ERROR"):		error();	break;
+		default:
+		std::cout << "Harl is waiting for more complainig." << std::endl; break;
 	}
-    std::cout << "Harl is waiting for more complainig." << std::endl;
 }
 
 void Harl::debug(void){
