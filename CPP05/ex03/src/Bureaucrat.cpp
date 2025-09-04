@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 14:19:28 by joklein           #+#    #+#             */
-/*   Updated: 2025/07/14 14:16:45 by joklein          ###   ########.fr       */
+/*   Updated: 2025/09/04 11:01:07 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,20 +38,20 @@ Bureaucrat::Bureaucrat(const Bureaucrat &other) : m_name(other.m_name), m_grade(
 
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other){
 	if (this != &other)
-		this->m_grade = other.m_grade;
+		m_grade = other.m_grade;
 	return (*this);
 }
 
 Bureaucrat::~Bureaucrat() {
-	std::cout << "Bureaucrat " << this->getName() << " destroyed." << std::endl;
+	std::cout << "Bureaucrat " << getName() << " destroyed." << std::endl;
 }
 
 std::string Bureaucrat::getName() const{
-	return (this->m_name);
+	return (m_name);
 }
 
 int Bureaucrat::getGrade() const{
-	return (this->m_grade);
+	return (m_grade);
 }
 
 void Bureaucrat::incrementGrade(){

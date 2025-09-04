@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 14:09:56 by joklein           #+#    #+#             */
-/*   Updated: 2025/08/28 11:06:54 by joklein          ###   ########.fr       */
+/*   Updated: 2025/09/04 11:00:39 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,7 @@ AForm::AForm(const AForm &other) : m_name(other.m_name),
 
 AForm &AForm::operator=(const AForm &other){
 	if (this != &other)
-	{
-		this->m_signed = other.m_signed;
-	}
+		m_signed = other.m_signed;
 	return (*this);
 }
 
@@ -47,27 +45,27 @@ AForm::~AForm(){
 }
 
 std::string AForm::getName() const{
-	return (this->m_name);
+	return (m_name);
 }
 
 int AForm::getSignGrade() const{
-	return (this->m_signGrade);
+	return (m_signGrade);
 }
 
 int AForm::getExecGrade() const{
-	return (this->m_execGrade);
+	return (m_execGrade);
 }
 
 bool AForm::isSigned() const{
-	return (this->m_signed);
+	return (m_signed);
 }
 
 void AForm::beSigned(){
-	this->m_signed = true;
+	m_signed = true;
 }
 
 std::string AForm::getTarget() const{
-	return (this->m_target);
+	return (m_target);
 }
 
 const char* AForm::GradeTooHighException::what() const noexcept {

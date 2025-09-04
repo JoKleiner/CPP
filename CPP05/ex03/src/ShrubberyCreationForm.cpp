@@ -6,14 +6,14 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 14:09:56 by joklein           #+#    #+#             */
-/*   Updated: 2025/08/28 11:09:53 by joklein          ###   ########.fr       */
+/*   Updated: 2025/09/04 11:01:35 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ShrubberyCreationForm.hpp"
 
 ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : AForm("Shrubbery", 145, 137, target){
-	std::cout << "ShrubberyCreationForm " << this->getName() << " created with target: " << target << "." << std::endl;
+	std::cout << "ShrubberyCreationForm " << getName() << " created with target: " << target << "." << std::endl;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &other) : AForm(other){
@@ -26,14 +26,14 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationF
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm() {
-	std::cout << "ShrubberyCreationForm " << this->getName() << " destroyed." << std::endl;
+	std::cout << "ShrubberyCreationForm " << getName() << " destroyed." << std::endl;
 }
 
 void ShrubberyCreationForm::execute(const Bureaucrat &executor) const {
-	if (executor.getGrade() > this->getExecGrade())
+	if (executor.getGrade() > getExecGrade())
 		throw AForm::GradeTooLowException();
 	
-	std::string filename = this->getTarget() + "_shrubbery";
+	std::string filename = getTarget() + "_shrubbery";
 	std::ofstream file_write(filename);
 	if (!file_write.is_open())
 		throw std::runtime_error("Failed to open file for writing.");
