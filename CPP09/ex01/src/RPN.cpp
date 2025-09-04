@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 12:35:37 by joklein           #+#    #+#             */
-/*   Updated: 2025/08/28 16:27:34 by joklein          ###   ########.fr       */
+/*   Updated: 2025/09/04 11:57:38 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,22 +43,17 @@ bool RPN::calc_result(char cha)
 {
 	switch (cha)
 	{
-	case ('-'):
-		m_result -= m_value;
-		break;
-	case ('+'):
-		m_result += m_value;
-		break;
-	case ('*'):
-		m_result *= m_value;
-		break;
-	case ('/'):
+		case ('-'):	m_result -= m_value;	break;
+		case ('+'):	m_result += m_value;	break;
+		case ('*'):	m_result *= m_value;	break;
+		case ('/'):
 		if (m_value == 0)
 		{
 			std::cerr << RED << "Error: divided by '0'" << RESET << std::endl;
 			return false;
 		}
 		m_result /= m_value;
+			break;
 	}
 	return true;
 }
