@@ -6,26 +6,24 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 12:04:52 by joklein           #+#    #+#             */
-/*   Updated: 2025/05/21 16:34:32 by joklein          ###   ########.fr       */
+/*   Updated: 2025/09/04 10:31:38 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap() : ClapTrap(){
+ScavTrap::ScavTrap() : ClapTrap(), m_guard(false) {
 	std::cout << "Default ScavTrap constructor called" << std::endl;
 	m_hit_points = 100;
 	m_energy_points = 50;
 	m_attack_dmg = 20;
-	m_guard = false;
 }
 
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name){
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name), m_guard(false) {
 	std::cout << "Setname ScavTrap constructor called" << std::endl;
 	m_hit_points = 100;
 	m_energy_points = 50;
 	m_attack_dmg = 20;
-	m_guard = false;
 	std::cout << "ScavTrap " << m_name << " | hit-points: " << m_hit_points << ", energy-points: " << m_energy_points << ", attack_dmg: " << m_attack_dmg << std::endl;
 }
 
@@ -41,10 +39,10 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &other)
 	std::cout << "Copy ScavTrap assignment operator called" << std::endl;
 	if (this != &other)
 	{
-		this->m_name = other.m_name;
-		this->m_hit_points = other.m_hit_points;
-		this->m_energy_points = other.m_energy_points;
-		this->m_attack_dmg = other.m_attack_dmg;
+		m_name = other.m_name;
+		m_hit_points = other.m_hit_points;
+		m_energy_points = other.m_energy_points;
+		m_attack_dmg = other.m_attack_dmg;
 	}
 	return (*this);
 }
@@ -60,18 +58,14 @@ void ScavTrap::attack(const std::string &target)
 		std::cout << m_name << " leaves the Gate keeper mode!" << std::endl;
 		m_guard = false;
 	}
-	if (this->m_hit_points <= 0)
-	{
-		std::cout << "ScavTrap " << m_name << " is out of hit-points" << std::endl;
-		return ;
-	}
-	if (this->m_energy_points <= 0)
-	{
-		std::cout << "ScavTrap " << m_name << " is out of energy-points" << std::endl;
-		return ;
-	}
+	
+	if (m_hit_points <= 0)
+   		return (std::cout << "ScavTrap " << m_name << " is out of hit-points" << std::endl, void());
+	if (m_energy_points <= 0)
+		return (std::cout << "ScavTrap " << m_name << " is out of energy-points" << std::endl, void());
+
 	std::cout << "ScavTrap " << m_name << " attacks " << target << ", causing " << m_attack_dmg << " points of damage!" << std::endl;
-	this->m_energy_points--;
+	m_energy_points--;
 	std::cout << "ScavTrap " << m_name << " | hit-points: " << m_hit_points << ", energy-points: " << m_energy_points << std::endl;
 }
 
