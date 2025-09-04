@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 14:36:35 by joklein           #+#    #+#             */
-/*   Updated: 2025/08/28 11:16:42 by joklein          ###   ########.fr       */
+/*   Updated: 2025/09/04 11:05:50 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Serializer
     
   private:
     Serializer();
-	Serializer(const Serializer &other);
-	Serializer &operator=(const Serializer &other);
-	~Serializer();
+	  Serializer(const Serializer &other);
+	  Serializer &operator=(const Serializer &other);
+	  ~Serializer();
 };
