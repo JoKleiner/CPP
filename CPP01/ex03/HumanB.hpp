@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 14:57:41 by joklein           #+#    #+#             */
-/*   Updated: 2025/08/28 10:27:10 by joklein          ###   ########.fr       */
+/*   Updated: 2025/09/04 09:48:55 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 class HumanB
 {
   public:
-	HumanB() = default;
 	HumanB(std::string name);
 	HumanB(Weapon &weapon);
 	~HumanB() = default;
