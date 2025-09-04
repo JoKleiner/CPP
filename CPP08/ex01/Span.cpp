@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 13:00:01 by joklein           #+#    #+#             */
-/*   Updated: 2025/08/28 11:58:18 by joklein          ###   ########.fr       */
+/*   Updated: 2025/09/04 11:43:04 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ Span::Span(unsigned int n) : m_size(n){
 }
 
 Span::Span(const Span &other) : m_size(other.m_size){
-    this->m_array = other.m_array;
+    m_array = other.m_array;
 }
 
 void Span::addNumber(int i)
@@ -63,9 +63,9 @@ void Span::add_multiple_num(unsigned int num)
 
     for (size_t i = 0; i < num; i++)
         temp_array.push_back(dist(gen));
-    
-    if (this->m_size < this->m_array.size() + temp_array.size())
+        
+    if (m_size < m_array.size() + temp_array.size())
         throw(std::length_error("Out of bounds"));
     
-    this->m_array.insert(this->m_array.end(), temp_array.begin(), temp_array.end());
+    m_array.insert(m_array.end(), temp_array.begin(), temp_array.end());
 }

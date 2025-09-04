@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 12:59:59 by joklein           #+#    #+#             */
-/*   Updated: 2025/08/28 11:52:47 by joklein          ###   ########.fr       */
+/*   Updated: 2025/09/04 11:41:58 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class Span
   public:
     Span(unsigned int n);
     Span(const Span &other);
+    Span &operator=(const Span &other) = delete; //cause: 'const' unsigned int m_size;
     ~Span() = default;
 
     void addNumber(int i);
