@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/10 11:59:24 by joklein           #+#    #+#             */
-/*   Updated: 2025/07/16 15:32:19 by joklein          ###   ########.fr       */
+/*   Updated: 2025/09/04 11:08:30 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,28 +39,28 @@ class Array
 // {
 //     public:
 //         Array() : m_size(0) {
-// 			this->m_array = new T[this->m_size];  };
+// 			m_array = new T[m_size];  };
             
 //         Array(unsigned int n) : m_size(n) {
-//             this->m_array = new T[this->m_size];  };
+//             m_array = new T[m_size];  };
 
 //         Array(const Array &other) : m_size(other.m_size) {
-//             this->m_array = NULL;
+//             m_array = NULL;
 // 			*this = other;  };
         
 //         Array &operator=(const Array &other) {
 //             if(this == &other)
 //                 return(*this);
-//             delete[] this->m_array;
-//             this->m_size = other.m_size;
-//             this->m_array = new T[this->m_size];
-//             for(unsigned int i = 0; i < this->m_size; i++)
-//                 this->m_array[i] = other.m_array[i];
+//             delete[] m_array;
+//             m_size = other.m_size;
+//             m_array = new T[m_size];
+//             for(unsigned int i = 0; i < m_size; i++)
+//                 m_array[i] = other.m_array[i];
 //             return(*this);  };
         
 //         ~Array() {
-//             if(this->m_array != NULL)
-//                 delete[] this->m_array;  };
+//             if(m_array != NULL)
+//                 delete[] m_array;  };
 
 //         T& operator[](unsigned int index) {
 //             if (index >= m_size)
@@ -75,7 +75,7 @@ class Array
 //         };
 
 //         unsigned int size() {
-//                 return(this->m_size);  };
+//                 return(m_size);  };
             
 //     private:
 //         T               *m_array;
