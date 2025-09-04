@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 16:39:46 by joklein           #+#    #+#             */
-/*   Updated: 2025/09/04 09:57:35 by joklein          ###   ########.fr       */
+/*   Updated: 2025/09/04 11:36:10 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,7 @@ void Harl::complain(std::string level)
 		case ct_hash("INFO"):		info();		break;
 		case ct_hash("WARNING"):	warning();	break;
 		case ct_hash("ERROR"):		error();	break;
-		default:
-		std::cout << "Harl is waiting for more complainig." << std::endl; break;
+		default:					wait(); 	break;
 	}
 }
 
@@ -46,4 +45,8 @@ void Harl::warning(void){
 
 void Harl::error(void){
 	std::cout << "This is unacceptable! I want to speak to the manager now." << std::endl;
+}
+
+void Harl::wait(void){
+	std::cout << "Harl is waiting for more complainig." << std::endl;
 }

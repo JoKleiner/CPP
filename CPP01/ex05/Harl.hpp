@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 16:39:44 by joklein           #+#    #+#             */
-/*   Updated: 2025/09/04 09:57:01 by joklein          ###   ########.fr       */
+/*   Updated: 2025/09/04 11:33:14 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class Harl
 	void info(void);
 	void warning(void);
 	void error(void);
+	void wait(void);
 };
 
 #endif
