@@ -20,8 +20,7 @@ int spez_case(const std::string &input)
         std::cout << "float: " << input << "f\n";
         std::cout << "double: " << input << std::endl;
     }
-    else
-    {
+    else {
         std::cout << "float: " << input << "\n";
         std::cout << "double: " << input.substr(0, input.length() - 1) << std::endl;
     }
