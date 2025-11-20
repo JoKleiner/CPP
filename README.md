@@ -1,6 +1,6 @@
-# C++ – CPP00 to CPP04 - 42 Project
+# C++ – CPP00 to CPP09 - 42 Project
 **About:**<br/>
-This project is a set of exercises (CPP00–CPP04) to learn the basics of modern C++.<br/>
+This project is a set of exercises (CPP00–CPP09) to learn the basics of modern C++.<br/>
 Each module focuses on specific C++ concepts like classes, inheritance, memory handling, and operator overloading.<br/>
 
 **Modules Overview:**<br/>
@@ -32,3 +32,30 @@ Abstract classes<br/>
 Interfaces and pure virtual functions<br/>
 Polymorphism in practice<br/>
 Memory management with new, delete<br/>
+
+**CPP05**<br/>
+Exceptions and error handling<br/>
+Class design and encapsulation<br/>
+Operator overloading<br/>
+Abstract classes and polymorphism<br/>
+Class collaboration<br/>
+
+**CPP06**<br/>
+ype detection and conversion<br/>
+C++ casts and special values<br/>
+Static, non-instantiable classes<br/>
+Pointer serialization/deserialization<br/>
+Polymorphism and runtime type identification<br/>
+
+**CPP07**<br/>
+Function and class templates<br/>
+Dynamic memory and deep copy<br/>
+Bounds-checked array access<br/>
+
+**CPP08**<br/>
+Templates and generic programming<br/>
+Container management and iterators<br/>
+Custom iterable containers<br/>
+
+**CPP09**<br/>
+
