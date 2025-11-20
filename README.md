@@ -58,7 +58,6 @@ Container management and iterators<br/>
 Custom iterable containers<br/>
 
 **CPP09**<br/>
-CPP09<br/>
 STL containers and algorithms<br/>
 File and input parsing<br/>
 Error handling and validation<br/>
