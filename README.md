@@ -1,7 +1,7 @@
 # C++ – CPP00 to CPP09 - 42 Project
 **About:**<br/>
-This project is a set of exercises (CPP00–CPP09) to learn the basics of modern C++.<br/>
-Each module focuses on specific C++ concepts like classes, inheritance, memory handling, and operator overloading.<br/>
+This project is a set of exercises (CPP00–CPP09) to learn of modern C++.<br/>
+Each module focuses on specific C++ concepts.
 
 **Modules Overview:**<br/>
 **CPP00**<br/>
